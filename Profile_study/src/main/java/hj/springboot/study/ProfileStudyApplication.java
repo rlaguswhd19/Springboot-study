@@ -5,9 +5,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class ProfileStudyApplication {
-
+	
 	public static void main(String[] args) {
-		SpringApplication.run(ProfileStudyApplication.class, args);
+		SpringApplication app = new SpringApplication(ProfileStudyApplication.class);
+		app.run(args);
 	}
 
 }
