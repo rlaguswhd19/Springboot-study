@@ -12,6 +12,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -42,7 +43,7 @@ public class AccountRepositoryTest {
 		Account account = new Account();
 		account.setUsername("khj");
 		account.setPassword("123");
-
+		account.setEmail("khj@naver.com");
 		Account newAccount = accountRepository.save(account);
 
 		assertThat(newAccount).isNotNull();
