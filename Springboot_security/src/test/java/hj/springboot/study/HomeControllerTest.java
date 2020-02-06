@@ -27,7 +27,7 @@ public class HomeControllerTest {
 	public void hello() throws Exception {
 		mockMvc.perform(get("/hello")
 				.accept(MediaType.TEXT_HTML))
-			.andDo(print())
+			.andDo(print()) 
 			.andExpect(status().isOk())
 			.andExpect(view().name("hello"));
 	}
